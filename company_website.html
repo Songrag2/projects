@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+       
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+/* Navbar styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    float: left;
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav {
+    float: right;
+    margin-right: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10
+}
+
+header nav ul li a:hover {
+    background: #575757;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #hamburger {
+        display: block;
+    }
+}
+
+/* Show class for mobile navigation */
+#nav-links.show {
+    display: flex;
+}
+
+/* Main content styles */
+main {
+    padding: 20px 0;
+    background: #fff;
+}
+
+section {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+section p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    background: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 4px solid #333;
+    transition: background 0.3s ease;
+}
+
+section ul li:hover {
+    background: #eaeaea;
+}
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header id="navbar">
+        <div class="container">
+            <h1 class="logo">Urbotech Solutions</h1>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button id="hamburger" onclick="toggleMenu()">&#9776;</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <h2>Home</h2>
+                <p>Welcome to our website! We are delighted to have you here. Our platform offers a range of features and services designed to meet your needs. Browse through our sections to learn more about what we offer and how we can assist you in achieving your goals.</p>
+                <p>Our website is designed with you in mind, offering an intuitive and user-friendly experience. Whether you're looking for information, services, or support, we're here to help. Explore our offerings and feel free to reach out if you have any questions.</p>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <h2>About</h2>
+                <p>Our company has been a leader in the industry for over a decade. We specialize in providing top-notch services to our clients, ensuring their satisfaction and success. Our team of experts is dedicated to delivering high-quality solutions tailored to your specific needs.</p>
+                <p>We believe in innovation, excellence, and customer satisfaction. Our mission is to empower our clients by providing them with the tools and resources they need to succeed. With a focus on continuous improvement, we strive to exceed your expectations at every turn.</p>
+                <p>Join us on our journey as we continue to grow and evolve. We are committed to making a positive impact and helping our clients achieve their goals. Thank you for choosing us as your trusted partner.</p>
+            </div>
+        </section>
+        <section id="services">
+            <div class="container">
+                <h2>Services</h2>
+                <p>Our wide range of services is designed to meet the diverse needs of our clients. We offer:</p>
+                <ul>
+                    <li>Consulting: Expert advice and strategies to help you navigate your industry and achieve your business goals.</li>
+                    <li>Development: Custom software and application development to enhance your operations and drive efficiency.</li>
+                    <li>Marketing: Comprehensive marketing solutions to boost your brand visibility and engagement.</li>
+                    <li>Support: Ongoing support and maintenance to ensure your systems run smoothly and effectively.</li>
+                </ul>
+                <p>Our team of professionals is here to provide you with the support and expertise you need to succeed. We are dedicated to delivering exceptional service and achieving outstanding results for our clients.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>We would love to hear from you! If you have any questions, comments, or inquiries, please feel free to reach out to us. You can contact us via the following methods:</p>
+                <ul>
+                    <li>Email: <a href="mailto:info@mywebsite.com">info@mywebsite.com</a></li>
+                    <li>Phone: 1234567890</li>
+                    <li>Address: XYZ Main Street, ABCtown, India</li>
+                </ul>
+                <p>Alternatively, you can fill out our contact form, and a member of our team will get back to you as soon as possible. We look forward to connecting with you and assisting you with your needs.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script >
+        function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('show');
+}
+
+    </script>
+</body>
+</html>
