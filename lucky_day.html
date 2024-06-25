@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+
+height:250px;
+width:40%;
+color: rgb(19, 107, 19);
+background-color: rgb(65, 3, 54);
+position:absolute;
+top:160px;
+    right:0;
+    left:0;
+    margin:auto;
+    
+    transition: transform 1s; 
+}
+#btn1
+{
+display:block;
+margin:auto;
+
+}
+h2
+{
+text-align:center;
+}
+body
+{
+background-color:black;
+color:white;
+}
+h1,h3
+{
+text-align:center;
+}
+#mainSelect
+{
+display:block;
+margin-left:auto;
+margin-right:auto;
+padding:5px;
+}
+#subSelect
+{
+display:block;
+margin-left:auto;
+margin-right:auto;
+padding:5px;
+}
+#btn
+{
+display:block;
+margin-left:auto;
+margin-right:auto;
+padding:5px;
+}
+#btn2
+{
+display:block;
+margin-left:auto;
+margin-right:auto;
+padding:5px;
+}
+#demo
+{
+
+text-align:center;
+font-size:40px;
+}
+.devilface
+{
+height:100px;
+width:50%;
+display: block;
+margin: auto;
+}
+
+</style>
+
+   
+
+    <h1>Welcome to the lucky day calculator </h1>
+    <h3>You are just one step away from knowing when you will be lucky </h3>
+    <br>
+    
+    <br><br>
+    
+    <select id="mainSelect">
+    <option disabled selected value>Select your birth month</option>
+    <option >January</option>
+    <option >February</option>
+    <option >March</option>
+    <option >April</option>
+    <option >May</option>
+    <option >June</option>
+    <option >July</option>
+    <option >August</option>
+    <option >September</option>
+    <option >October</option>
+    <option >November</option>
+    <option >December</option>
+    </select>
+    <br><br>
+    <select id="subSelect">
+    <option disabled selected value>Select your zodiac</option>
+    <option >Leo</option>
+    <option >Pisces</option>
+    <option >Sagittarius</option>
+    <option >Aries</option>
+    <option >Cancer</option>
+    <option >Libra</option>
+    <option >Taurus</option>
+    <option > Gemini</option>
+    <option > Capricorn</option>
+    <option > Aquarius</option>
+    <option > Scorpio</option>
+    <option > Virgo</option>
+    </select>
+    <br><br>
+    <button id="btn2" > Click me  	&#128511;</button>
+    <p id="demo"></p>
+ 
+ 
+ <br>
+ 
+
+</body>
+<script>
+
+
+const fruits =["June 15, 2057",
+"September 28, 2059",
+"April 5, 2063",
+"November 12, 2066",
+"August 22, 2070",
+"May 7, 2074",
+"October 19, 2078",
+"December 3, 2082",
+"July 11, 2085",
+"February 9, 2089",
+"March 14, 2093",
+"October 27, 2097",
+"August 2, 2101",
+"December 18, 2105",
+"June 23, 2109",
+"November 30, 2113",
+"April 7, 2117",
+"September 15, 2121",
+"May 20, 2125",
+"July 8, 2129"];
+
+
+
+function func2()
+{
+let y= fruits.length; 
+let x=fruits[Math.floor(Math.random() * y)];
+document.getElementById("demo").innerHTML = x;
+}
+document.getElementById("btn2").addEventListener("click", func2);
+
+
+</script>
+</html>
+
+
